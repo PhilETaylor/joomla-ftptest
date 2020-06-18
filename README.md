@@ -16,4 +16,10 @@
    - Enable FTP Layer = yes
    - Save FTP Credentials = yes
 
- - At the end configuration.php is shown, you need to manually upload that using FTP and delete the installation folder  
+ - At the end configuration.php is shown, you need to `docker exec -it CONTAINERHASH bash` into the container and use `nano configuration.php` to save the configuration php code.
+
+ - while in the container manually delete installation with `rm -Rf installation`
+
+ - while in the container set the permissions of your file `chown www-ftp:www:ftp configuration.php`
+
+ - FIX the ftp path in configuration.php, it should be (and should be found by installer and is not) `/var/www/html`
