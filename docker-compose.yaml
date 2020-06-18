@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  joomla:
+    depends_on:
+      - mysql
+    build: ./docker
+    links:
+      - mysql:mysql
+    ports:
+      - "80:80"
+      - "21:21"
+      - "20:20"
+      - "10100:10100"
+    environment:
+      JOOMLA_DB_HOST: mysql:3306
+      JOOMLA_DB_PASSWORD: example
+    volumes:
+      - ./put_joomla_files_here:/var/www/html
+    
+  mysql:
+    image: mysql:5.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
