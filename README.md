@@ -6,7 +6,7 @@
  - Open FTP Client and FTP to SERVER `127.0.0.1` USERNAME `www-ftp` PASSWORD `www-ftp`
  
  - go through Joomla 3 installation
-   - mysql serrver: mysql
+   - mysql server: mysql
    - mysql username: root
    - mysql password: example
 
