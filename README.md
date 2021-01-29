@@ -16,7 +16,7 @@
    - Enable FTP Layer = yes
    - Save FTP Credentials = yes
 
- - At the end configuration.php is shown, you need to `docker exec -it CONTAINERHASH bash` into the container and use `nano configuration.php` to save the configuration php code.
+ - At the end configuration.php is shown, you need to `docker exec -it CONTAINERHASH bash` into the container and use `nano configuration.php` to save the configuration php code. (get the CONTAINERHASH by running command `docker ps` and the hash is the first column called CONTAINER ID, next to `joomla-ftptest_joomla`)
 
  - while in the container manually delete installation with `rm -Rf installation`
 
