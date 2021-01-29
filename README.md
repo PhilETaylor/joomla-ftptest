@@ -20,6 +20,6 @@
 
  - while in the container manually delete installation with `rm -Rf installation`
 
- - while in the container set the permissions of your file `chown www-ftp:www:ftp configuration.php`
+ - while in the container set the permissions of your file `chown www-ftp:www-ftp configuration.php`
 
  - FIX the ftp path in configuration.php, it should be (and should be found by installer and is not) `/var/www/html`
