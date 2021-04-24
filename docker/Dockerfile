@@ -11,6 +11,7 @@ RUN echo "www-ftp:www-ftp"|chpasswd www-ftp
 RUN chsh -s /bin/bash www-ftp
 RUN usermod -d /var/www/html www-ftp
 RUN chown -Rf www-ftp:www-ftp /var/www
+RUN chmod 755 /var/www/html
 
 COPY entrypointCustom.sh /entrypointCustom.sh
 RUN chmod +x /entrypointCustom.sh
